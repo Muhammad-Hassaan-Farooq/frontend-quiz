@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import axios from "axios";
 import { useState } from "react";
+import Navbar from "./Navbar";
 
 function UserPage() {
   const user = useSelector((state) => state.app);

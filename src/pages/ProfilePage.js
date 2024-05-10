@@ -4,6 +4,7 @@ import { Navigate } from "react-router-dom";
 
 import axios from "axios";
 import UserPage from "./components/UserPage";
+import Navbar from "./components/Navbar";
 
 function HomePage() {
   const user = useSelector((state) => state.app);
@@ -12,7 +13,12 @@ function HomePage() {
 
   if (!user.isAuthenticated) return <Navigate to="/login" />;
   else {
-    return <UserPage />;
+    return (
+      <>
+        <Navbar />
+        <UserPage />
+      </>
+    );
   }
 }
 
